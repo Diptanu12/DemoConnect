@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css'],
+})
+export class AboutComponent implements OnInit {
+  constructor(private route: Router, private activedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {}
+
+  navtoHome() {
+    this.route.navigate(['/Home']), {relativeTo : this.activedRoute};
+    // this.route.navigateByUrl('Home');
+  }
+}

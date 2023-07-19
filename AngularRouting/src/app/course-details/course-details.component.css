@@ -1,0 +1,12 @@
+.course-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    margin: 100px auto;
+    border-radius: 15px 0px 15px 0px;
+    width: 600px;
+    box-shadow: -1px 4px 28px 0px rgba(1, 90, 16, 0.75);
+    border: 1px solid rgb(41, 63, 8);
+}

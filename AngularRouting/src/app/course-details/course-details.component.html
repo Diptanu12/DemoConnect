@@ -1,0 +1,32 @@
+<!-- <ng-container *ngFor="let course of course" > -->
+<div class="course-container">
+  <div>
+    <img src="{{course.image}}" alt="" width="240" height="200">
+  </div>
+
+  <div class="courses-details">
+    <div >
+      <h1 style="text-align: center;" *ngIf="!editMode">{{course.name}}</h1>
+      <div style="text-align: center;" *ngIf="editMode">
+        <input type="text" [(ngModel)]="course.name">
+      </div>
+    </div>
+    <div style="margin: 0px 10px;"><b>Author :</b>{{course.author}}</div>
+    <div style="margin: 0px 10px;"><b>Duration : </b>{{course.duration}}</div>
+    <div style="margin: 0px 10px;"><b>Type : </b>{{course.type}}</div>
+    <div style="margin: 0px 10px;">
+      <p><b>Description :</b> {{course.description}}</p>
+    </div>
+    <div style="margin: 0px 10px;">
+      <p><b>price :</b> {{course.price}}</p>
+    </div>
+    <!-- <button><a routerLink="/course-details/101">Go to first course</a></button> -->
+    <!-- <button [routerLink]="['/course-details', course.id]" [queryParams]="{edit : true}">Edit</button> -->
+
+    <button (click)="appendQueryParams()">Edit</button>
+    <button (click)="editMode=false" [routerLink]="['/course-details', course.id]">Update</button>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
+
+<!-- </ng-container> -->
